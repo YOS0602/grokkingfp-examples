@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: 'scala-devcontainer:grokkingfp'
+    container_name: grokkingfp-examples
+    volumes:
+      - ..:/workspaces/grokkingfp-examples:rw
+      # Gitのconfigファイルでユーザー定義 Hostを指定しているため
+      # - ~/.ssh:/home/vscode/.ssh:ro
+    tty: true
+    restart: always
+    # enable the tini init process to handle signals and clean up Zombie processes if you do not have an alternative set up
+    # See https://github.com/microsoft/vscode-dev-containers/blob/main/script-library/docs/docker-in-docker.md#feature-use
+    init: true
