@@ -14,7 +14,11 @@
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": ["scalameta.metals", "scala-lang.scala-snippets"]
+      "extensions": [
+        "scalameta.metals",
+        "scala-lang.scala-snippets",
+        "vscjava.vscode-java-pack"
+      ]
     }
   }
 
